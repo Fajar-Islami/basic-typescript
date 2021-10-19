@@ -24,9 +24,19 @@
 // const Add: Tambah = (val1: number, val2: number): number => {
 //   return val1 + val2;
 // };
-// 4. Default argument
-var fullname = function (first, last) {
-    if (last === void 0) { last = "Fajar"; }
-    return first + " " + last;
+// 4. Default Parameter
+// const fullname = (first: string, last: string = "Fajar"): string => {
+//   return first + " " + last;
+// };
+// console.log(fullname("Ahmad"));
+// console.log(fullname("Ahmad", "Islami"));
+// 5. Opitonal Parameter ==> menggunakan tanda tanya
+// Kalau paramter kedua kosong, maka akan diset undefined
+var getName = function (val1, val2) {
+    return val1 + " " + val2;
 };
-console.log(fullname("Ahmad"));
+console.log(getName("Ahmad"));
+console.log(getName("Ahmad", "fajar"));
+var add = function (val1, val2) {
+    return val1 + val2; // error karena val 2 kemungkinan kosong (optional)
+};
