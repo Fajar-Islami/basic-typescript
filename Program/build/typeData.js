@@ -15,7 +15,7 @@
 // isMarried = [] // error
 // isMarried = 19 // error
 // 4. Any ==> bisa diisi oleh banyak tipe data
-var heroes = "Iron man";
-heroes = 30;
-heroes = [];
-heroes = true;
+// let heroes: any = "Iron man";
+// heroes = 30;
+// heroes = [];
+// heroes = true;
