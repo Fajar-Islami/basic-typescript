@@ -41,10 +41,12 @@ console.log(user.name);
 // Inheritance
 var Admin = /** @class */ (function (_super) {
     __extends(Admin, _super);
-    function Admin() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
+    function Admin(name, age, phone) {
+        var _this = _super.call(this, name, age) || this;
+        // property
         _this.read = true;
         _this.write = true;
+        _this.phone = phone;
         return _this;
     }
     //   Method
@@ -53,6 +55,6 @@ var Admin = /** @class */ (function (_super) {
     };
     return Admin;
 }(User));
-var admin = new Admin("Ahmad", 27); // karena mewarisi user, maka diisi sesuai params di user
+var admin = new Admin("Ahmad", 27, "0812"); // karena mewarisi user, maka diisi sesuai params di user
 console.log(admin);
 console.log(admin.getRole());

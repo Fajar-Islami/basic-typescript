@@ -22,8 +22,15 @@ console.log(user.name);
 
 // Inheritance
 class Admin extends User {
+  // property
   read: boolean = true;
   write: boolean = true;
+  phone: string;
+
+  constructor(name: string, age: number, phone: string) {
+    super(name, age);
+    this.phone = phone;
+  }
 
   //   Method
   getRole(): {
@@ -34,6 +41,6 @@ class Admin extends User {
   }
 }
 
-let admin = new Admin("Ahmad", 27); // karena mewarisi user, maka diisi sesuai params di user
+let admin = new Admin("Ahmad", 27, "0812"); // karena mewarisi user, maka diisi sesuai params di user
 console.log(admin);
 console.log(admin.getRole());
