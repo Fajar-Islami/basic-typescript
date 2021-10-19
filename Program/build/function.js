@@ -32,11 +32,11 @@
 // console.log(fullname("Ahmad", "Islami"));
 // 5. Opitonal Parameter ==> menggunakan tanda tanya
 // Kalau paramter kedua kosong, maka akan diset undefined
-var getName = function (val1, val2) {
-    return val1 + " " + val2;
-};
-console.log(getName("Ahmad"));
-console.log(getName("Ahmad", "fajar"));
-var add = function (val1, val2) {
-    return val1 + val2; // error karena val 2 kemungkinan kosong (optional)
-};
+// const getName = (val1: string, val2?: string): string => {
+//   return val1 + " " + val2;
+// };
+// console.log(getName("Ahmad"));
+// console.log(getName("Ahmad", "fajar"));
+// const add = (val1: number, val2?: number): number => {
+//   return val1 + val2; // error karena val 2 kemungkinan kosong (optional)
+// };
