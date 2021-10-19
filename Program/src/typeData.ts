@@ -22,3 +22,9 @@
 // heroes = 30;
 // heroes = [];
 // heroes = true;
+
+// 5. Union type ==> satu variabel punya lebih dari 1 tipe data
+// let phone: string | number; // phone memiliki 2 tipe data
+// phone = 628124;
+// phone = "081212";
+// phone = true; // error
