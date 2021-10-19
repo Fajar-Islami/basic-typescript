@@ -14,8 +14,17 @@
 // printName();
 
 // 2. Function dengan Argument
-function multiply(val1: number, val2: number): number {
-  return val1 * val2;
-}
-const result = multiply(2, 20);
-console.log(result);
+// function multiply(val1: number, val2: number): number {
+//   return val1 * val2;
+// }
+// const result = multiply(2, 20);
+// console.log(result);
+
+// 3. Function as type
+// Biasanya ini ditetapkan tim
+type Tambah = (val1: number, val2: number) => number;
+
+// Ini adalah function Add dengan type nya adalah Tambah
+const Add: Tambah = (val1: number, val2: number): number => {
+  return val1 + val2;
+};

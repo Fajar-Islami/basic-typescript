@@ -4,16 +4,7 @@
 //   return "Hello, my name is fajar";
 // }
 // console.log(getName());
-// function getAge(): number {
-//   return 123;
-// }
-// function printName(): void {
-//   console.log("Print name");
-// }
-// printName();
-// 2. Function dengan Argument
-function multiply(val1, val2) {
-    return val1 * val2;
-}
-var result = multiply(2, 20);
-console.log(result);
+// Ini adalah function Add dengan type nya adalah Tambah
+var Add = function (val1, val2) {
+    return val1 + val2;
+};
