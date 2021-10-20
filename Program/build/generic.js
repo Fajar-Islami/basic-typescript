@@ -4,7 +4,7 @@ function getData(value) {
     return value;
 }
 console.log(getData("Ahmad").length);
-console.log(getData(123).length);
+console.log(getData(123).length); // undefined
 /*
 Contoh generic dengan <T>
 Tipe data diatur berdasarkan argumen yang dikirim

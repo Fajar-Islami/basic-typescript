@@ -5,7 +5,7 @@ function getData(value: any) {
 }
 
 console.log(getData("Ahmad").length);
-console.log(getData(123).length);
+console.log(getData(123).length); // undefined
 
 /* 
 Contoh generic dengan <T>
