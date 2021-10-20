@@ -27,10 +27,16 @@ class Admin extends User {
   write: boolean = true;
   phone: string;
   private _email: string = "";
+  static getRoleName: string = "Admin"; // static method sudah nempel dari kelasnya
 
   constructor(name: string, age: number, phone: string) {
     super(name, age);
     this.phone = phone;
+  }
+
+  // Static method ==>  static method sudah nempel dari kelasnya
+  static getNameRole() {
+    return "Hei";
   }
 
   //   Method
@@ -50,7 +56,7 @@ class Admin extends User {
     }
   }
 
-  // Get
+  // Get untuk mendapatkan data email
   get email(): string {
     return this._email;
   }
@@ -64,3 +70,7 @@ admin.email = "fajar@mail.com";
 console.log(admin.email);
 
 // admin._email // error karena private
+
+let admin2 = Admin.getRoleName; // static method sudah nempel dari kelasnya
+console.log(admin2);
+console.log(Admin.getNameRole());

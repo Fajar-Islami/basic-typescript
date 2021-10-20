@@ -50,12 +50,16 @@ var Admin = /** @class */ (function (_super) {
         _this.phone = phone;
         return _this;
     }
+    // Static method ==>  static method sudah nempel dari kelasnya
+    Admin.getNameRole = function () {
+        return "Hei";
+    };
     //   Method
     Admin.prototype.getRole = function () {
         return { read: this.read, write: this.write };
     };
     Object.defineProperty(Admin.prototype, "email", {
-        // Get
+        // Get untuk mendapatkan data email
         get: function () {
             return this._email;
         },
@@ -71,6 +75,7 @@ var Admin = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    Admin.getRoleName = "Admin"; // static method sudah nempel dari kelasnya
     return Admin;
 }(User));
 var admin = new Admin("Ahmad", 27, "0812"); // karena mewarisi user, maka diisi sesuai params di user
@@ -79,3 +84,6 @@ var admin = new Admin("Ahmad", 27, "0812"); // karena mewarisi user, maka diisi 
 admin.email = "fajar@mail.com";
 console.log(admin.email);
 // admin._email // error karena private
+var admin2 = Admin.getRoleName; // static method sudah nempel dari kelasnya
+console.log(admin2);
+console.log(Admin.getNameRole());
