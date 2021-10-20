@@ -32,7 +32,7 @@ var User = /** @class */ (function () {
 }());
 exports.User = User;
 var user = new User("Ahmad Fajar", 17);
-console.log(user.name);
+// console.log(user.name);
 /*  **note
     public = bisa di akses disemua kelas / dari luas kelas
     protected = hanya bisa diakses dari class tersebut dan kelas turunannya
@@ -46,6 +46,7 @@ var Admin = /** @class */ (function (_super) {
         // property
         _this.read = true;
         _this.write = true;
+        _this._email = "";
         _this.phone = phone;
         return _this;
     }
@@ -53,8 +54,28 @@ var Admin = /** @class */ (function (_super) {
     Admin.prototype.getRole = function () {
         return { read: this.read, write: this.write };
     };
+    Object.defineProperty(Admin.prototype, "email", {
+        // Get
+        get: function () {
+            return this._email;
+        },
+        // Set tidak digunakan untuk return, sehingga tidak perlu return
+        set: function (value) {
+            if (value.length < 5) {
+                this._email = "email salah";
+            }
+            else {
+                this._email = value;
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Admin;
 }(User));
 var admin = new Admin("Ahmad", 27, "0812"); // karena mewarisi user, maka diisi sesuai params di user
-console.log(admin);
-console.log(admin.getRole());
+// console.log(admin);
+// console.log(admin.getRole());
+admin.email = "fajar@mail.com";
+console.log(admin.email);
+// admin._email // error karena private
